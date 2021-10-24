@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
 import s from './ImageGalleryItem.module.css';
 
-export default class ImageGalleryItem extends Component {
-  render() {
-    const { webformatURL, tags, toggleModal, bigImage } = this.props;
+export default function ImageGalleryItem ({ webformatURL, tags, toggleModal, bigImage }){
     return (
       <li className={s.ImageGalleryItem}>
         <img
@@ -18,7 +15,6 @@ export default class ImageGalleryItem extends Component {
         />
       </li>
     );
-  }
 }
 
 ImageGalleryItem.propTypes = {
